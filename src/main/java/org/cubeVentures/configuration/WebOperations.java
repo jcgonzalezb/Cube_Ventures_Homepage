@@ -1,12 +1,14 @@
 package org.cubeVentures.configuration;
 
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 
 /**
  * Represents the operations done by a web browser.
@@ -27,7 +29,7 @@ public abstract class WebOperations {
      */
     public WebOperations(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, 50L);
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(50L));
         PageFactory.initElements(driver, this);
     }
 
@@ -86,11 +88,10 @@ public abstract class WebOperations {
     }
 
     /**
-     * Returns the user from other page on the ESPN site to the home page.
-     *
-     * @result The user is return to the ESPN home page.
+     * Scrolls down the current page.
      */
-    public void switchToMain() {
-        getDriver().switchTo().defaultContent();
+    public void scrollDown() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
     }
 }

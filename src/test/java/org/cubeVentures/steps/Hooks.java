@@ -29,7 +29,7 @@ public class Hooks {
         Reporter.info("Deleting all the cookies");
         driver.getDriver().manage().deleteAllCookies();
         Reporter.info(format("Navigating to %s", URL));
-        Reporter.info("Navigating to the ESPN Landing Page");
+        Reporter.info("Navigating to the Cube Ventures Page");
         driver.getDriver().get(URL);
         driver.getDriver().manage().window().maximize();
     }
@@ -50,6 +50,4 @@ public class Hooks {
     public static WebDriver getDriver() {
         return driver.getDriver();
     }
-
-
 }

@@ -20,7 +20,9 @@ public class HomePage extends BasePage {
      * @param driver The driver that controls the behaviour
      *               of a web browser.
      */
-    public HomePage(WebDriver driver) { super(driver); }
+    public HomePage(WebDriver driver) {
+        super(driver);
+    }
 
     /**
      * Checks if the entrepreneurs icon is displayed.
@@ -45,6 +47,15 @@ public class HomePage extends BasePage {
     }
 
     /**
+     * Accesses the 'entrepreneurs' option on the upper panel.
+     *
+     * @result Click done on the 'entrepreneurs' icon.
+     */
+    public void accessEntrepreneursOption() {
+        completeAccessToElement(entrepreneursIcon);
+    }
+
+    /**
      * Takes the user to the entrepreneurs page.
      *
      * @return The entrepreneurs page is opened.
@@ -53,7 +64,4 @@ public class HomePage extends BasePage {
         completeAccessToElement(entrepreneursIcon);
         return new EntrepreneursPage(getDriver());
     }
-
-
-
 }

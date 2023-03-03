@@ -34,5 +34,37 @@ public class EntrepreneursPage extends BasePage {
         super(driver);
     }
 
+    /**
+     * Checks if the name field is displayed.
+     *
+     * @return True if the name field is displayed,
+     * otherwise the return is false.
+     */
+    public boolean isNameFieldDisplayed() {
+        super.waitForVisibility(nameField);
+        return nameField.isDisplayed();
+    }
+
+    /**
+     * Checks if the email field is displayed.
+     *
+     * @return True if the email field is displayed,
+     * otherwise the return is false.
+     */
+    public boolean isEmailFieldDisplayed() {
+        super.waitForVisibility(emailField);
+        return emailField.isDisplayed();
+    }
+
+    /**
+     * Checks if the subscribe button is displayed.
+     *
+     * @return True if the subscribe button is displayed,
+     * otherwise the return is false.
+     */
+    public boolean isSubscribeButtonDisplayed() {
+        super.waitForVisibility(subscribeButton);
+        return subscribeButton.isDisplayed();
+    }
 
 }
