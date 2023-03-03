@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="TAE Academy Automation Final Exam" verbose="1">
+<suite name="Cube Ventures page testing" verbose="1">
 
     <test name="Cube Venture test">
         <classes>
