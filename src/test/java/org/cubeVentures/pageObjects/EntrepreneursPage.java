@@ -9,19 +9,19 @@ public class EntrepreneursPage extends BasePage {
     /**
      * The name field to the newsletter 'Entrepreneurs'.
      */
-    @FindBy(id = "input_comp-ldw8d2js")
+    @FindBy(id = "input_comp-lf8u41mk")
     private WebElement nameField;
 
     /**
      * The email field to the newsletter 'Entrepreneurs'.
      */
-    @FindBy(id = "input_comp-ldw8ng9s")
+    @FindBy(id = "input_comp-lf8u41mp")
     private WebElement emailField;
 
     /**
      * The subscribe button field to the newsletter 'Entrepreneurs'.
      */
-    @FindBy(id = "comp-ldw8ctun")
+    @FindBy(css = "#comp-lf8u41mx > button > div")
     private WebElement subscribeButton;
 
     /**
